@@ -12,8 +12,7 @@ const InputTodos = () => {
                 headers: {"Content-Type":"application/json"},
                 body: JSON.stringify(body)
             });
-            
-            console.log(response);
+            window.location("/");
         } catch (error) {
             console.error(error.message)
         }
@@ -29,7 +28,7 @@ const InputTodos = () => {
                         value={description}
                         onChange={e => setDescription(e.target.value)} />
                     <div className="input-group-append">
-                        <button className="btn btn-outline-secondary">Add</button>
+                        <button className="btn btn-secondary">Add</button>
                     </div>
                 </div>
             </form>
